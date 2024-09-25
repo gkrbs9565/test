@@ -1,119 +1,366 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    /* border: 1px solid; */
+  margin: 0;
+  /*바깥쪽 여백 : 0*/
+  padding: 0;
+  /*안쪽 여백 : 0*/
+  box-sizing: border-box;
+  /*테두리두께 무시*/
+}
+html {
+  scroll-behavior: smooth;
 }
 
 a {
-    display: block;
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  /*밑줄 제거*/
+  display: block;
+  /*a태그를 블록요소로 변경*/
+  color: black;
+  /*글자색 : black*/
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
+  /*li태그 기호 제거*/
 }
 
 .container {
-    width: 100%;
-    height: 1200px;
+  width: 100%;
+  height: 1200px;
+  margin-top: -148px;
 
-    background: linear-gradient(rgba(0,0,0,0.8) , rgba(0,0,0,0.8)) ,url(cd.jpg) no-repeat;
-    background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(bg.jpg) no-repeat;
+  background-size: cover;
+
+  color: white;
+
+
 }
+
 .header {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 100px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+  display: flex;
+  /*자식요소들을 가로로 배치*/
+  justify-content: space-between;
+  /*가로로 어떻게 배치할지 : space-between*/
+  align-items: center;
+  /*세로로 어떻게 배치할지 : center*/
+
+  position: fixed;
+  /* 상단 고정 */
+  top: 0;
+  /* 화면 상단에 위치 */
+  left: 0;
+  /* 화면 왼쪽에 위치 */
+  z-index: 1000;
+  /* 다른 요소 위에 나타나도록 설정 */
+
+  background-color: rgba(0, 0, 0, 0.8);
+  /* 배경색을 추가하여 가독성 향상 */
 }
+
 
 .logo {
-    width: 200px;
-    height: 80px;
+  width: 200px;
+  height: 80px;
 
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    background-color: black;
-    border-radius: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
 
-    border: 2px solid white;
+  transition: 0.3s;
 }
+
 .logo:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    transition: 0.3s;
-}
-.menu {
-    width: 600px;
-    height: 100px;
+  color: #ff6a6a;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+}
+
+
+
+.menu {
+  width: 400px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+
 }
 
 .menu li {
-    width: 25%;
-    text-align: center;
+  width: 25%;
+  text-align: center;
 }
+
 .menu li a {
-    background-color: black;
-    color: white;
-    border-radius: 10px;
+
+  color: white;
+  transition: 0.3s;
 }
 
 .menu li a:hover {
-    background-color: white;
-    color: black;
-    transition: 0.3s;
+  color: #ff6a6a;
 }
+
 
 .main {
-    width: 700px;
-    height: 500px;
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
 
-    margin: 0 auto;
-    margin-top: 200px;
+  padding-top: 25%;
 
-    text-align: center;
-
-    color: white;
+  text-align: center;
 }
+
 .main h1 {
-    font-size: 40px;
-
-    margin-bottom: 50px;
+  font-size: 50px;
+  margin-bottom: 50px;
 }
+
 .main h2 {
-    font-size: 30px;
-    margin-bottom: 50px;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
+
 .main p {
-    font-size:  30px;
-    margin-bottom: 100px;
+  font-size: 30px;
+  margin-bottom: 50px;
 }
+
 .main button {
-    font-size: 30px;
-    width: 300px;
-    height: 100px;
-    border-radius: 30px;
-    background-color: transparent;
+  font-size: 30px;
+  width: 300px;
+  height: 100px;
 
-    border: 3px solid white;
-    color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  background-color: transparent;
+
+
+  color: white;
+  transition: 0.3s;
 }
-.main button:hover {
-    background-color: white;
-    border: 3px solid white;
-    color: black;
 
-    transition: 0.3s;
+.main button:hover {
+  background-color: white;
+  color: black;
+
+
+}
+
+.about {
+  width: 1200px;
+  height: 800px;
+
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.about h2 {
+  font-size: 30px;
+  color: #ff6a6a;
+
+}
+
+.about h1 {
+  font-size: 50px;
+}
+
+.about .contents {
+  width: 100%;
+  height: 500px;
+
+  display: flex;
+
+}
+
+.about .left {
+  width: 400px;
+  height: 500px;
+}
+
+.about .left img {
+  width: 400px;
+  height: 500px;
+}
+
+.about .right {
+  width: 800px;
+  height: 500px;
+  padding-left: 10px;
+
+}
+
+.about .right h3 {
+  color: #ff6a6a;
+  font-size: 30px;
+}
+
+.about .right li {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.fa-brands {
+  font-size: 50px;
+  margin-right: 6px;
+}
+
+.fa-youtube {
+  color: red;
+
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.skills {
+  width: 100%;
+  height: 800px;
+  background-color: #eee;
+
+  padding-top: 100px;
+}
+
+.skills-inner {
+  width: 1200px;
+  height: 800px;
+
+  margin: 0 auto;
+
+}
+
+.skills h1 {
+  font-size: 50px;
+}
+
+.skills h2 {
+  font-size: 30px;
+  color: #ff6a6a;
+}
+
+.skills h3 {
+  font-size: 30px;
+
+  margin-bottom: 20px;
+}
+
+.skills .contents {
+  width: 1200px;
+  height: 400px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-top: 50px;
+}
+
+.skills li {
+  width: 350px;
+  height: 350px;
+
+  background-color: white;
+
+  font-size: 21px;
+  text-align: center;
+  padding: 10px;
+
+  transition: 0.3s;
+
+  border-radius: 10px;
+}
+
+.skills li:hover {
+  background-color: #ff6a6a;
+  color: white;
+  transform: translateY(-10px);
+}
+
+/* .skills p {} */
+
+.bg {
+  width: 100%;
+  height: 800px;
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+.projects {
+  height: 1200px;
+}
+
+.contact {
+  width: 100%;
+  height: 800px;
+
+  margin-top: 100px;
+}
+
+.contact-inner {
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.contact h1 {
+  font-size: 50px;
+}
+
+.contact h2 {
+  font-size: 30px;
+  color: #ff6a6a;
+}
+
+.contact .contents {
+  display: flex;
+}
+
+.contact .left {
+  width: 400px;
+  height: 800px;
+}
+
+.info li {
+  width: 300px;
+  height: 80px;
+  border: 1px solid #ccc;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.contact .right {
+  width: 800px;
+  height: 800px;
+}
+
+.contact h5 {
+  font-weight: normal;
+  margin-top: 50px;
+}
+
+.contact input {
+  width: 700px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.contact textarea {
+  width: 700px;
+  height: 300px;
+}
+
+.contact button {
+  width: 700px;
+  height: 50px;
+  text-align: center;
+  background-color: orange;
+  color: white;
 }
